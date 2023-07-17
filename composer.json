@@ -1,0 +1,17 @@
+{
+    "name": "talita/painel_bahiana",
+    "autoload": {
+        "psr-4": {
+            "Talita\\PainelBahiana\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "talita"
+        }
+    ],
+    "require": {
+        "chillerlan/php-qrcode": "^4.3",
+        "ircmaxell/password-compat": "^1.0"
+    }
+}
