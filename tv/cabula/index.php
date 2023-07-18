@@ -7,7 +7,7 @@
   <meta http-equiv="refresh" content="600">
   <title>Painel Eletrônico</title>
   <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     <div class="carousel-inner">
 
       <div class="carousel-item active" data-bs-interval="<?= $intervalo ?>">
-        <?php include '../includes/header.php'; ?>
+        <?php include '../includes/headerr.php'; ?>
         <div class="tabela">
           <?php include '../includes/data_cabula.php'; ?>
           <div class="table-responsive">

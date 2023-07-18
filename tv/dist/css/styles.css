@@ -17,8 +17,8 @@ header {
   z-index: 0;
 }
 
-header h1 {
-  font-size: 39px;
+header h2 {
+  font-size: 36px;
   font-weight: 700;
   margin: 0;
   line-height: 32px;
@@ -56,7 +56,7 @@ p {
   font-weight: 500 !important;
 }
 
-header h1 {
+header h2 {
   color: #fff;
 }
 
@@ -181,19 +181,28 @@ header h1 {
   body {
     pointer-events: auto;
   }
+
+  header h2{
+    font-size: 32px;
+  }
+
+  header img {
+    max-width: 230px !important;
+  }
+ 
 }
 
 @media only screen and (max-width: 1200px) {
   header {
-    padding: 25px 20px;
+    padding: 20px 20px;
   }
 
   header img {
-    max-width: 250px !important;
+    max-width: 240px !important;
   }
 
-  header h1 {
-    font-size: 28px;
+  header h2{
+    font-size: 22px !important;
   }
 
   .day {
@@ -227,8 +236,8 @@ header h1 {
     margin-bottom: 20px;
   }
 
-  header h1 {
-    font-size: 24px;
+  header h2 {
+    font-size: 26px;
   }
 
   .day {

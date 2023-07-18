@@ -311,7 +311,10 @@ header h1 {
   body {
     pointer-events: auto;
   }
- 
+
+  /* header h1{
+    font-size: 26px;
+  } */
 }
 
 @media only screen and (max-width: 1200px) {
@@ -325,7 +328,7 @@ header h1 {
   }
 
   header h1 {
-    font-size: 20px;
+    font-size: 26px;
     margin-left: 20px;
   }
 
