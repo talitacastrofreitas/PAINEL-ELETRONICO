@@ -22,7 +22,7 @@
 }
 
 body{
-  background-color: #DCDCE6;
+  background-color: rgb(243, 243, 243);
 }
 
 .nav-item a{
@@ -62,6 +62,7 @@ footer {
   padding: 30px 50px 30px 50px;
   text-align: center;
   border-radius: 20px;
+  border: solid 1px rgb(214, 212, 212);
   background: #fff;
   margin-top: 60px;
   
@@ -80,43 +81,10 @@ p{
 
 /* LABEL E INPUT */
 
-.field_box {
-    width: 100%;
-    margin: 15px 0;
-    position: relative;
-}
-
-.field_box input {
-    width: 100%;
-    padding: var(--padding);
-    border: 1px solid rgba(180, 180, 180, 1);
-    border-radius: var(--radius-borda);
-    outline: none;
-    font-size: 18px;
-}
-
-.field_box input:focus {
-    border-color: rgba(0, 161, 87, 1);
-}
-
-.field_box input:focus+.form_label {
-    color: rgba(0, 161, 87, 1);
-}
-
-.field_box input:focus + .form_label,
-.field_box input:valid + .form_label {
-    top: -15px;
-}
-
-.form_label {
-    position: absolute;
-    top: 8px;
-    left: 25px;
-    color: gray;
-    font-weight: var(--peso-fonte);
-    transition: all .3s ease;
-    background-color: white;
-    padding: 5px;
+.form-control:focus{
+  border-color: rgba(0, 161, 87, 1);
+  outline: 0;
+  box-shadow: none;
 }
 
 /* BOTÃO */
@@ -125,9 +93,9 @@ p{
     width: 10rem;
     padding: var(--padding);
     border-color: transparent;
-    border-radius: var(--radius-borda);
+    border-radius: 10px;
     font-size: var(--tamanho-fonte);
-    font-weight: var(--peso-fonte);
+    font-weight: 700;
     cursor: pointer;
     margin-bottom: 8px;
     text-transform: uppercase; 
@@ -176,6 +144,39 @@ form .bt-close:hover {
 .fa-right-from-bracket:hover{
     color: #19b803;
   }
+
+
+  .navbarr-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url(../dist/img/barra-de-menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.navbarr-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  /* color: var(--bs-navbar-color); */
+  background-color: transparent;
+  border: none;
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
+
+
+  @media (max-width:991px) {
+    
+    .fa-solid{
+      display: none;
+    }
+    
+  }
+
 /* ====================TABLES============= */
 
 

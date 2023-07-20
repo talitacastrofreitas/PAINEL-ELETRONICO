@@ -3,7 +3,7 @@ session_start();
 
 // Verifica se o usuário está autenticado
 if (!isset($_SESSION['usuario_autenticado']) || ($_SESSION['usuario_autenticado']) !== true) {
-    header('Location: ./admin/login.php');
+    header('Location: ./admin/index.php');
     exit();
 }
 
@@ -47,8 +47,8 @@ if (isset($_SESSION['cadastro_success'])) {
         <a class="navbar-brand" href="tela_admin.php" style="font-weight: 600; color: #fff; font-size: 26px;">
             <img src="./dist/img/logo_header.svg" style="margin-left: 20px; width: 200px; height: 50px" alt="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbarr-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./dist/img/barra-de-menu.png" width="30px" height="30px">
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -62,17 +62,19 @@ if (isset($_SESSION['cadastro_success'])) {
                 <li class="nav-item">
                     <a class="nav-link" href="./tela_admin.php#lista" data-target="lista">Lista de usuários</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="./upload.php">Upload</a>
-                </li> -->
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.php">Painel</a>
+                    <a class="nav-link" href="./painel.php">Painel</a>
+                </li>
+
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link" href="./admin/logout.php">Sair</a>
                 </li>
             </ul>
         </div>
         <a class="btn-sair" href="./admin/logout.php"><i class="fa-solid fa-right-from-bracket fa-xl" style="margin-right: 2vw;"></i></a>
     </nav>
-
+    
 
     <!-- SEÇÕES (CONTEUDO DOS LINKS DA NAVBAR) -->
     <div class="content">
@@ -168,25 +170,25 @@ if (isset($_SESSION['cadastro_success'])) {
                 <!-- <div class="container"> -->
                 <form class="row" onsubmit="return validarSenha()" action="./includes/salvar_cadastro.php" method="post">
 
-                    <div class="col-6">
-                        <div class="field_box ">
-                            <input class="form_input mb-2" type="email" name="email" id="email" autocomplete="off" required>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3 ">
+                            <input class="form-control" type="email" name="email" id="email" placeholder="setor-name@bahiana.edu.br" autocomplete="off" required>
                             <label for="email" class="form_label">E-mail</label>
                         </div>
                     </div>
 
 
-                    <div class="col-6">
-                        <div class="field_box">
-                            <input class="form_input mb-2" type="text" name="nome" id="nome" autocomplete="off" required>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome completo" autocomplete="off" required>
                             <label for="nome" class="form_label">Nome completo</label>
                         </div>
                     </div>
 
 
-                    <div class="col-6">
-                        <div class="field_box">
-                            <input class="form_input mb-2" type="text" name="matricula" id="matricula" autocomplete="off" required>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="matricula" id="matricula" placeholder="Digite sua matrícula" autocomplete="off" required>
                             <label for="nome" class="form_label">Matrícula</label>
                         </div>
                     </div>
@@ -203,9 +205,9 @@ if (isset($_SESSION['cadastro_success'])) {
                     </script>
 
 
-                    <div class="col-6">
-                        <div class="field_box">
-                            <input class="form_input" type="password" name="senha" id="senha" autocomplete="off" required>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite uma senha" autocomplete="off" required>
                             <label for="senha" class="form_label">Senha</label>
                             <small class="form-text" style="font-size:12px; color:red;" id="senha-error"></small>
                         </div>
@@ -227,9 +229,10 @@ if (isset($_SESSION['cadastro_success'])) {
                             }
                         </script>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                         <button type="submit" name="submit" class="saved mx-3 mt-4"><a class="bt-saved" style="text-decoration:none;">cadastrar</a></button>
-
+                        </div>
+                        <div class="col-md">
                         <button class="back mt-4"><a class="bt-close" style="text-decoration:none;" href="tela_admin.php">cancelar</a></button>
                     </div>
             </div>
