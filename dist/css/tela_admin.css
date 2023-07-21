@@ -56,28 +56,28 @@ footer {
     --tamanho-fonte: 16px;
 }
 
-.box{
-  width: 50%;
-  margin: auto;
-  padding: 30px 50px 30px 50px;
+
+/* s */
+
+.form-signin {
+justify-content: center;
+max-width: 680px;
+padding: 3rem;
+background-color: #fff;
+border-radius: 5px;
+border:solid 1px rgb(230, 230, 230)
+}
+
+.form-signin .form-floating:focus-within {
+z-index: 2;
+}
+
+
+.sub, .title{
   text-align: center;
-  border-radius: 20px;
-  border: solid 1px rgb(214, 212, 212);
-  background: #fff;
-  margin-top: 60px;
-  
 }
 
-.card-title{
-  font-size: 20px;
-  font-weight: 700;
-  color: #005900;
-  margin: 0;
-}
 
-p{
-  margin: 0;
-}
 
 /* LABEL E INPUT */
 
@@ -89,39 +89,58 @@ p{
 
 /* BOTÃO */
 
-.back, .saved{
-    width: 10rem;
-    padding: var(--padding);
+
+@media screen and (max-width: 576px) {
+  .voltar, .salvar {
+    width: 1rem;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+
+/* .voltar, .salvar{
+  border-radius: 5px;
+  border: 1px solid #000;
+  width: 8rem;
+  padding: var(--padding);
+  align-items: center;
+  text-transform: uppercase;
+} */
+
+.voltar, .salvar{
+  width: 15rem;
+    padding: 10px;
     border-color: transparent;
-    border-radius: 10px;
-    font-size: var(--tamanho-fonte);
+    border-radius: 5px;
+    font-size: 10px;
     font-weight: 700;
     cursor: pointer;
     margin-bottom: 8px;
     text-transform: uppercase; 
   }
 
-  form .bt-close, form .bt-saved{
+  form .bt-voltar, form .bt-salvar{
     color: white;
   }
 
   
-form .bt-close:hover {
+form .bt-voltar:hover {
     transition: all .2s ease-in-out;
   }
 
-.saved{
+.salvar{
     background-color: #036d33;
-  } .saved:hover{
+  } .salvar:hover{
     background-color:#209956 ;
   }
 
-.back{
+.voltar{
     background-color: #969494;
-  } .back:hover{
+  } .voltar:hover{
     background-color:#707070 ;
   }
-  form .bt-close:hover{
+  form .bt-voltar:hover{
     color:#fff;
   }
 

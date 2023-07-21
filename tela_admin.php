@@ -38,7 +38,9 @@ if (isset($_SESSION['cadastro_success'])) {
     <!-- CSS -->
     <link href="./dist/css/tela_admin.css" rel="stylesheet">
 </head>
-
+    
+        
+    <!--  -->
 <body>
     <!-- FOOTER -->
     <footer style="background-image: url(./dist/img/bg_header.svg);">&copy2023. Todos os direitos reservados - Painel Eletrônico</footer>
@@ -62,7 +64,7 @@ if (isset($_SESSION['cadastro_success'])) {
                 <li class="nav-item">
                     <a class="nav-link" href="./tela_admin.php#lista" data-target="lista">Lista de usuários</a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="./painel.php">Painel</a>
                 </li>
@@ -74,7 +76,7 @@ if (isset($_SESSION['cadastro_success'])) {
         </div>
         <a class="btn-sair" href="./admin/logout.php"><i class="fa-solid fa-right-from-bracket fa-xl" style="margin-right: 2vw;"></i></a>
     </nav>
-    
+
 
     <!-- SEÇÕES (CONTEUDO DOS LINKS DA NAVBAR) -->
     <div class="content">
@@ -118,7 +120,8 @@ if (isset($_SESSION['cadastro_success'])) {
                             <p class="mb-0">Para baixar o arquivo modelo, clique <a style="text-decoration: none;" href="dist/img/modelo.csv">aqui</a></p>
                         </div>
 
-                        <form action="./controller/controller_upload.php" method="POST" enctype="multipart/form-data">
+                        
+                        <form  action="./controller/controller_upload.php" method="POST" enctype="multipart/form-data">
                             <div class="row m-0">
                                 <div class="mb-3 p-0">
                                     <label for="formFileLg" class="form-label">Arquivo</label>
@@ -157,11 +160,12 @@ if (isset($_SESSION['cadastro_success'])) {
         </div>
 
         <!-- Conteúdo para a seção "CADASTRAR USUÁRIO" -->
+        
         <div id="cadastro" class="info" style="display: none;">
-
-            <div class="box">
-                <h3 class="card-title">CADASTRAR USUÁRIO</h3>
-                <p>Informe os dados a serem cadastrados.</p><br>
+        <main class="form-signin mt-4 w-100 m-auto">
+            <div>
+            <h1 class="title h5 fw-normal">CADASTRAR USUÁRIO</h1>
+                <p class=" sub mb-4 fw-normal">Informe os dados a serem cadastrados.</p><br>
                 <!-- MENSAGEM DE SUCESSO -->
                 <?php if (isset($msgSuccess)) : ?>
                     <p class="success-message" style="color: green;"><?php echo $msgSuccess; ?></p>
@@ -229,15 +233,19 @@ if (isset($_SESSION['cadastro_success'])) {
                             }
                         </script>
                     </div>
-                    <div class="col-md">
-                        <button type="submit" name="submit" class="saved mx-3 mt-4"><a class="bt-saved" style="text-decoration:none;">cadastrar</a></button>
-                        </div>
-                        <div class="col-md">
-                        <button class="back mt-4"><a class="bt-close" style="text-decoration:none;" href="tela_admin.php">cancelar</a></button>
+
+                    <div class="col-md-6">
+                        <button class="btn btn-success w-100 mx-1 py-2 mb-2" style=" color: #fff;" type="submit" name="submit">Entrar</button><br>
                     </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-secondary w-100 py-2 mb-2" style=" color: #fff;" type="submit" name="submit">Cancelar</button><br><br>
+                    </div>
+                   
             </div>
+            </main>
             </form>
         </div>
+                        
 
     </div>
     </div>
