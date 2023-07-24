@@ -66,7 +66,7 @@ if (isset($_SESSION['cadastro_success'])) {
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="./painel.php">Painel</a>
+                    <a class="nav-link" href="./index.php">Painel</a>
                 </li>
 
                 <li class="nav-item d-block d-lg-none">
@@ -235,7 +235,7 @@ if (isset($_SESSION['cadastro_success'])) {
                     </div>
 
                     <div class="col-md-6">
-                        <button class="btn btn-success w-100 mx-1 py-2 mb-2" style=" color: #fff;" type="submit" name="submit">Entrar</button><br>
+                        <button class="btn btn-success w-100 mx-1 py-2 mb-2" style=" color: #fff;" type="submit" name="submit">Cadastrar</button><br>
                     </div>
                     <div class="col-md-6">
                         <button class="btn btn-secondary w-100 py-2 mb-2" style=" color: #fff;" type="submit" name="submit">Cancelar</button><br><br>

@@ -59,17 +59,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
     <main class="form-signin w-100 m-auto">
       
-       <!-- MENSAGEM DE ERRO -->
-       <?php if (isset($mensagemErro)) { ?>
-        <span style="color: red;"><?php echo $mensagemErro; ?></span>
-    <?php } ?>
+    
     
     <form name="" action="./index.php" method="post">
     
-        <img class="mb-4 nav__logo" src="https://acesso.bahiana.edu.br/img/bahiana-logo.png" alt="logo-bahiana" width="250" height="57" >
-        <h1 class="h5 mb-4 fw-normal">Informe seus dados de acesso.</h1>
+        <img class="mb-4" style="align-items:center" src="https://acesso.bahiana.edu.br/img/bahiana-logo.png" alt="logo-bahiana" width="280" height="57">
+        <h1 class="h5 mb-4 fw-normal" style="text-align: center">Informe seus dados de acesso.</h1>
+
+           <!-- MENSAGEM DE ERRO -->
+       <?php if (isset($mensagemErro)) { ?>
+        <span style="color: red;"><?php echo $mensagemErro; ?></span>
+    <?php } ?> 
         
-        <div class="form-floating">
+        <div class="form-floating mt-4">
           <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
           <label for="email">E-mail</label>
         </div>
@@ -78,14 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <label for="senha">Senha</label>
         </div>
     
-        <div class="form-check text-start my-3">
-          <input class="form-check-input" type="checkbox" value="lembrar-me" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            Mantenha-me conectado.
-          </label>
-        </div>
         <button class="btn btn-success w-100 py-2" style=" color: #fff;"type="submit" name="submit">Entrar</button><br><br>
-        <div class="footer"><p class="mt-5 mb-3 text-body-secondary">&copy;2023. Todos os direitos reservados - Painel Eletrônico</p></div>
+        <div class="footer" style="text-align:center"><p class="mt-5 mb-3 text-body-secondary">&copy;2023. Todos os direitos reservados - Painel Eletrônico</p></div>
       </form>
     </main>
     <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

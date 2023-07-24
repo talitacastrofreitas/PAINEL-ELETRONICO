@@ -14,7 +14,8 @@ body {
   padding: 1rem;
   background-color: #fff;
   border-radius: 5px;
-  border:solid 1px rgb(230, 230, 230)
+  border:solid 1px rgb(230, 230, 230);
+  
 }
 
 .form-signin .form-floating:focus-within {
@@ -42,7 +43,7 @@ body {
 
 
  @media (min-width: 768px){
-.header-nav__logo img {
+.nav__logo img {
     max-width: 200px;
 }
 
@@ -50,17 +51,16 @@ body {
 
 @media (min-width: 576px){
 
-.header-nav__logo img {
+.nav__logo img {
     max-width: 25%;
 }
-.header-nav__logo img {
+.nav__logo img {
     max-width: 30%;
 }
 }
      
-.header-nav__logo {
-    height: 50px;
-    display: flex;
+.nav__logo {
+  display: flex;
     justify-content: center;
     align-items: center;
 }
