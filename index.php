@@ -16,7 +16,7 @@
   <i class="fa-solid fa-gear fa-lg" style="color: #fff;"></i>
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Fazer login</a></li>
+    <li><a class="dropdown-item" href="./admin/index.php">Fazer login</a></li>
   </ul>
 </div>
 
