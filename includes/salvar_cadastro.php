@@ -23,9 +23,16 @@ if ($arquivo) {
     
     // Fecha o arquivo CSV
     fclose($arquivo);
-    
     $_SESSION['cadastro_success'] = 'Cadastro realizado com sucesso!';
-    // header('Location: #cadastro');
-    header('Location: ../tela_admin.php#cadastro');
 
+     // Limpa o buffer de saída
+  ob_clean();
+
+  // Redirecionamento com a âncora para a página desejada
+  header('Location: ../tela_admin.php#cadastro');
+  exit(); // Certifique-se de sair do script após o redirecionamento
 }
+   
+   
+
+

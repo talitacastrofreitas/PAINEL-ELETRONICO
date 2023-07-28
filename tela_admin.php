@@ -52,17 +52,19 @@ if (isset($_SESSION['cadastro_success'])) {
         <button class="navbarr-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <img src="./dist/img/barra-de-menu.png" width="30px" height="30px">
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./tela_admin.php" data-target="upload">Upload</a>
+                    <a class="nav-link" href="./tela_admin.php" data-section="upload" data-target="upload">Upload</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin/cadastro_usuario.php" data-target="cadastro">Cadastrar admin</a>
+                    <a class="nav-link" href="./admin/cadastro_usuario.php" data-section="cadastro" data-target="cadastro">Cadastrar admin</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="./tela_admin.php#lista" data-target="lista">Lista de usuários</a>
+                    <a class="nav-link" href="./tela_admin.php#lista" data-section= "lista" data-target="lista">Lista de usuários</a>
                 </li>
 
                 <li class="nav-item">
@@ -82,7 +84,7 @@ if (isset($_SESSION['cadastro_success'])) {
     <div class="content">
 
         <!-- Conteúdo para a seção "Upload" -->
-        <div id="upload" class="info" style="display: none;">
+        <section id="upload" class="info" style="display: none;">
             <div class="container">
                 <div class="row m-0">
                     <div class="col-md-12">
@@ -157,20 +159,20 @@ if (isset($_SESSION['cadastro_success'])) {
                 });
             </script>
 
-        </div>
+            </section>
 
         <!-- Conteúdo para a seção "CADASTRAR USUÁRIO" -->
         
-        <div id="cadastro" class="info" style="display: none;">
-        <main class="form-signin mt-4 w-100 m-auto">
+        <section id="cadastro" class="info" style="display: none;">
+        <main class="form-signin mt-5 w-100 m-auto">
             <div>
             <h1 class="title h5 fw-normal">CADASTRAR USUÁRIO</h1>
-                <p class=" sub mb-4 fw-normal">Informe os dados a serem cadastrados.</p><br>
+            <p class=" sub mb-2 fw-normal">Informe os dados a serem cadastrados.</p><br>
                 <!-- MENSAGEM DE SUCESSO -->
                 <?php if (isset($msgSuccess)) : ?>
-                    <p class="success-message" style="color: green;"><?php echo $msgSuccess; ?></p>
+                    <p class="success-message mb-4" style="color: green; text-align:center"><?php echo $msgSuccess; ?></p>
                 <?php endif; ?>
-
+                
                 <!-- <div class="container"> -->
                 <form class="row" onsubmit="return validarSenha()" action="./includes/salvar_cadastro.php" method="post">
 
@@ -238,20 +240,21 @@ if (isset($_SESSION['cadastro_success'])) {
                         <button class="btn btn-success w-100 mx-1 py-2 mb-2" style=" color: #fff;" type="submit" name="submit">Cadastrar</button><br>
                     </div>
                     <div class="col-md-6">
-                        <button class="btn btn-secondary w-100 py-2 mb-2" style=" color: #fff;" type="submit" name="submit">Cancelar</button><br><br>
+                        <a href="./tela_admin.php" class="btn btn-secondary w-100 py-2 mb-2" style=" color: #fff;" type="submit" name="submit">Cancelar</a><br><br>
                     </div>
                    
             </div>
             </main>
             </form>
-        </div>
+        </section>
                         
 
     </div>
     </div>
     </div>
-    <div id="lista" class="info" style="display: none;">
-        <!-- Conteúdo para a seção "LISTA DE USUÁRIOS" -->
+    <!-- Conteúdo para a seção "LISTA DE USUÁRIOS" -->
+    <section id="lista" class="info" style="display: none;">
+        
 
         <?php
         // Função para excluir um usuário
@@ -322,7 +325,7 @@ if (isset($_SESSION['cadastro_success'])) {
                 window.location.href = "#excluir";
             }
         </script>
-    </div>
+    </section>
 
     <script>
         // Captura todos os elementos <a> com o atributo data-target
