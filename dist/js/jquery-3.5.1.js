@@ -1005,7 +1005,7 @@ function createInputPseudo( type ) {
  * Returns a function to use in pseudos for buttons
  * @param {String} type
  */
-function createButtonPseudo( type ) {
+function createbuttonPseudo( type ) {
 	return function( elem ) {
 		var name = elem.nodeName.toLowerCase();
 		return ( name === "input" || name === "button" ) && elem.type === type;
@@ -2302,7 +2302,7 @@ for ( i in { radio: true, checkbox: true, file: true, password: true, image: tru
 	Expr.pseudos[ i ] = createInputPseudo( i );
 }
 for ( i in { submit: true, reset: true } ) {
-	Expr.pseudos[ i ] = createButtonPseudo( i );
+	Expr.pseudos[ i ] = createbuttonPseudo( i );
 }
 
 // Easy API for creating new setFilters

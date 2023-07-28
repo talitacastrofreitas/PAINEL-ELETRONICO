@@ -9,6 +9,9 @@
   <!-- BOOTSTRAP -->
   <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
   <!-- DATA TABLE -->
   <link rel="stylesheet" href="dist/css/jquery.dataTables.min.css">
 
@@ -21,6 +24,8 @@
 <!-- FONT-AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
+<script src="https://kit.fontawesome.com/0de36d37a3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 </head>
 

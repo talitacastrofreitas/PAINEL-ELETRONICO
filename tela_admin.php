@@ -150,7 +150,7 @@ if (isset($_SESSION['cadastro_success'])) {
                             icon: 'error',
                             title: 'Erro encontrado!',
                             text: 'O arquivo selecionado ultrapassa o tamanho permitido de 10mb.',
-                            confirmButtonText: 'Cancelar'
+                            confirmbuttonText: 'Cancelar'
                         })
 
                         //alert('O tamanho do arquivo excede o limite de 10 MB.');
